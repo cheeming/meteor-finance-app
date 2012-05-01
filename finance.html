@@ -1,0 +1,40 @@
+<head>
+  <title>Finances</title>
+  <script type="text/javascript" src="https://raw.github.com/timrwood/moment/1.6.1/min/moment.min.js"></script>
+</head>
+
+<body>
+  {{> addexpense}}
+  {{> expenses}}
+</body>
+
+<template name="addexpense">
+<div class="addexpense">
+<h1>Add Expense 2</h1>
+<label for="id_name" class="name">Name</label><input type="text" id="id_name" class="name" />
+<label for="id_amount" class="amount">Amount</label><input type="text" id="id_amount" class="amount" />
+<input type="submit" class="add" value="Add" />
+</div>
+</template>
+
+<template name="expenses">
+<h1>Expenses</h1>
+<table class="expenses">
+<tr>
+    <th class="timestamp">Timestamp</th>
+    <th class="name">Name</th>
+    <th class="amount">Amount</th>
+</tr>
+{{#each expenses}}
+    {{> expense}}
+{{/each}}
+</table>
+</template>
+
+<template name="expense">
+<tr class="expense">
+    <td class="timestamp">{{ timestamp_display }}</td>
+    <td class="name">{{ name }}</td>
+    <td class="amount">{{ amount }}</td>
+</tr>
+</template>

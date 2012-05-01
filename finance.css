@@ -1,0 +1,49 @@
+body,
+input,
+label,
+table {
+    font-family: 'Helvetica Neue',Helvetica,Arial,san-serif;
+    font-size: 14px;
+}
+.addexpense label {
+    margin-right: 0.5em;
+    font-weight: bold;
+    color: #555555;
+}
+.addexpense label.amount {
+    margin-left: 1em;
+}
+.addexpense input,
+.addexpense label {
+    font-size: 1.5em;
+}
+.addexpense input.name {
+    width: 20em;
+}
+.addexpense input.amount {
+    width: 6em;
+}
+
+table.expenses,
+table.expenses th,
+table.expenses td {
+    border: 0.1em solid #cccccc;
+}
+table.expenses th,
+table.expenses td {
+    padding: 0.1em 0.4em;
+    vertical-align: middle;
+    text-align: center;
+}
+table.expenses th {
+    background-color: #eeeeee;
+}
+table.expenses th.timestamp {
+    width: 10em;
+}
+table.expenses th.name {
+    width: 20em;
+}
+table.expenses th.amount {
+    width: 6em;
+}
