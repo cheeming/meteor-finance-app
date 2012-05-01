@@ -10,31 +10,40 @@
 
 <template name="addexpense">
 <div class="addexpense">
-<h1>Add Expense 2</h1>
-<label for="id_name" class="name">Name</label><input type="text" id="id_name" class="name" />
+<h1>Add Expense</h1>
+<div>
+<label for="id_desc" class="desc">Name</label><input type="text" id="id_desc" class="desc" />
 <label for="id_amount" class="amount">Amount</label><input type="text" id="id_amount" class="amount" />
 <input type="submit" class="add" value="Add" />
+</div>
+<div class="error">{{ error }}</div>
 </div>
 </template>
 
 <template name="expenses">
 <h1>Expenses</h1>
+{{#if got_expenses }}
 <table class="expenses">
 <tr>
     <th class="timestamp">Timestamp</th>
-    <th class="name">Name</th>
+    <th class="desc">Desc</th>
     <th class="amount">Amount</th>
 </tr>
 {{#each expenses}}
     {{> expense}}
 {{/each}}
 </table>
+{{/if}}
+
+{{#unless got_expenses }}
+<div class="no_items">Got no expenses at the moment.</div>
+{{/unless}}
 </template>
 
 <template name="expense">
 <tr class="expense">
     <td class="timestamp">{{ timestamp_display }}</td>
-    <td class="name">{{ name }}</td>
-    <td class="amount">{{ amount }}</td>
+    <td class="desc">{{ desc }}</td>
+    <td class="amount">{{ amount_display }}</td>
 </tr>
 </template>

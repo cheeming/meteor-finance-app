@@ -17,11 +17,17 @@ table {
 .addexpense label {
     font-size: 1.5em;
 }
-.addexpense input.name {
+.addexpense input.desc {
     width: 20em;
 }
 .addexpense input.amount {
     width: 6em;
+}
+.addexpense .error {
+    padding-top: 1em;
+    color: #ff0000;
+    font-weight: bold;
+    height: 1em;
 }
 
 table.expenses,
@@ -41,9 +47,12 @@ table.expenses th {
 table.expenses th.timestamp {
     width: 10em;
 }
-table.expenses th.name {
+table.expenses th.desc {
     width: 20em;
 }
 table.expenses th.amount {
     width: 6em;
+}
+.no_items {
+    color: #555555;
 }
